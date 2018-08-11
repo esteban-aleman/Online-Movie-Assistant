@@ -1,0 +1,23 @@
+@import '../../assets/style/_variables.scss';
+
+.main-nav {
+
+  &__oma-logo {
+    width: 119px;
+    height: 45px;
+    background-image: url(../../assets/img/omalogo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__message-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: solid 2px $light-grey;
+
+    &:hover {
+      border: solid 2px #fff;
+    }
+  }
+}

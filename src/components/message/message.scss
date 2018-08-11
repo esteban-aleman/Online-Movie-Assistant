@@ -1,0 +1,30 @@
+@import '../../assets/style/variables';
+
+.message {
+
+  &__user {
+    color: #fff;
+  }
+
+  &__ai {
+    color: $brand-color;
+  }
+
+  &__avatar-ai {
+    background-image: url('../../assets/img/meBW.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  &__avatar-user {
+    background-image: url('../../assets/img/meBW.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}

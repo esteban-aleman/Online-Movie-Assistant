@@ -1,0 +1,30 @@
+@import '../../assets/style/basics';
+
+.chat {
+
+  &__messages {
+    height: 350px;
+  }
+
+  &__message-form {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__message-input {
+
+    &:focus {
+      color: #fff;
+      box-shadow: 0 2px $brand-color;
+    }
+  }
+
+  &__message-send-btn {
+
+    &:focus {
+      color: $brand-color;
+      box-shadow: none;
+    }
+  }
+}
