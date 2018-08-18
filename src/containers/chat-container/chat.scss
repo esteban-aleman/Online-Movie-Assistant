@@ -22,9 +22,16 @@
 
   &__message-send-btn {
 
-    &:focus {
+    &:hover {
       color: $brand-color;
+      background-color: $primary-color;
+    }
+
+    &:focus {
+      color: #fff;
       box-shadow: none;
+      border: solid 0;
+      background-color: $primary-color;
     }
   }
 }

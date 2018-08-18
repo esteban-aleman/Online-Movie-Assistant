@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React from 'react';
 import {
     Container,
     Collapse,
@@ -13,12 +13,11 @@ import {
     DropdownMenu,
     DropdownItem} from 'reactstrap';
 
-import './header.scss';
+import './main-nav.scss';
 
 import userAvatar from '../../assets/img/meC.png';
 
-export default class Header extends Component {
-  render() {
+const MainNav = (props) => {
     return (
         <Container>
             <Navbar className='mt-4 mb-4 px-0' dark expand="xs">
@@ -57,5 +56,6 @@ export default class Header extends Component {
             </Navbar>
         </Container>
     );
-  }
 }
+
+export default MainNav;

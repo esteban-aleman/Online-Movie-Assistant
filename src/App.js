@@ -1,23 +1,24 @@
+import 'babel-polyfill'
 import React, { Component } from 'react';
 
-import Header from './components/header';
-import Discover from './pages/discover';
+import MainNav from './components/main-nav-component';
+import Discover from './pages/discover-page';
 
 import './assets/style/_basics.scss';
 
-class App extends Component {
-  render() {
+const App = () => {
     return (
       <div className='App'>
-          <header className='App-header'>
-              <Header />
+          <header>
+              <MainNav/>
           </header>
-          <Discover/>
+          <main>
+              <Discover/>
+          </main>
           <footer>
           </footer>
       </div>
     );
-  }
 }
 
 export default App;
