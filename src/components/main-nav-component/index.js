@@ -12,7 +12,7 @@ import {
     DropdownToggle,
     DropdownMenu,
     DropdownItem} from 'reactstrap';
-
+import {Link} from 'react-router-dom'
 import './main-nav.scss';
 
 import userAvatar from '../../assets/img/meC.png';
@@ -26,13 +26,13 @@ const MainNav = (props) => {
                 <Collapse isOpen={true} navbar>
                     <Nav className="ml-auto" navbar>
                         <NavItem className='active mt-2'>
-                            <NavLink href="/">Discover</NavLink>
+                            <NavLink tag={Link} to='/'>Discover</NavLink>
                         </NavItem>
                         <NavItem className='mt-2'>
                             <NavLink className='px-0 mx-0'>|</NavLink>
                         </NavItem>
                         <NavItem className='mt-2'>
-                            <NavLink href="https://github.com/reactstrap/reactstrap">Saved</NavLink>
+                            <NavLink tag={Link} to='/saved'>Saved</NavLink>
                         </NavItem>
                         <UncontrolledDropdown nav inNavbar>
                             <DropdownToggle className='px-0 ml-2' nav>

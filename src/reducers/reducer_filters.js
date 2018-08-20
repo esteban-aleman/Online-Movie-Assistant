@@ -10,9 +10,23 @@ export default function(state = INITIAL_STATE, action) {//sci-fi
         case 'FILTERS_ADD':
             switch (action.payload) {
                 case 'action':
-                case 'sci-fi':
+                case 'adventure':
+                case 'animation':
                 case 'comedy':
+                case 'crime':
+                case 'documentary':
+                case 'drama':
+                case 'family':
+                case 'fantasy':
+                case 'history':
                 case 'horror':
+                case 'music':
+                case 'mystery':
+                case 'romance':
+                case 'sci-fi':
+                case 'thriller':
+                case 'war':
+                case 'western':
                     return {
                         filters: {...state.filters, genres: [...state.filters.genres, action.payload] }
                     };

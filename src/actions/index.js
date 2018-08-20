@@ -29,6 +29,20 @@ export function removeFilter (filter) {
     };
 }
 
+export function addSave (movie) {
+    return{
+      type: 'SAVED_ADD',
+      payload: movie
+    };
+}
+
+export function removeSave (movie) {
+    return {
+        type: 'SAVED_REMOVE',
+        payload: movie
+    }
+}
+
 export function retrieveSuggestions (filters) {
 
     return async dispatch => {

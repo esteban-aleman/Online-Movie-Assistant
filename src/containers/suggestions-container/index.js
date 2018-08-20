@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
-import {retrieveSuggestions} from "../../actions";
+import {retrieveSuggestions, addSave} from "../../actions";
 
 import MainSuggestion from '../../components/main-suggestion-component'
 import SecondarySuggestion from "../../components/secondary-suggestion-component";
@@ -20,17 +20,21 @@ class Suggestions extends Component {
 
     render() {
         return (
-            <div className="d-flex justify-content-between">
+            <div className="d-block d-md-flex  justify-content-between">
                 {
                     this.props.loading
                         ?
                         <div></div>
                         :
                         this.state.hierachy==='main'
-                            ? <MainSuggestion movie={this.props.suggestions[0]}/>
+                            ? <MainSuggestion movie={this.props.suggestions[0]}
+                                              saved={this.props.savedSearch.indexOf(this.props.suggestions[0].id)>-1}
+                                              onMovieAdd={selectedMovie => this.props.addSave(selectedMovie)}/>
 
                             : this.props.suggestions.map((movie,i) =>
-                                i!==0 && i<6 && <SecondarySuggestion key={movie.id} movie={movie}/>
+                                i!==0 && i<6 && <SecondarySuggestion key={movie.id} movie={movie}
+                                                                     saved={this.props.savedSearch.indexOf(movie.id)>-1}
+                                                                     onMovieAdd={selectedMovie => this.props.addSave(selectedMovie)}/>
                             )
                 }
             </div>
@@ -38,18 +42,20 @@ class Suggestions extends Component {
     }
 }
 
-
 function mapStateToProps(state) {
     return {
         suggestions: state.suggestionsReducer.suggestions,
         loading: state.suggestionsReducer.loading,
-        filters: state.filtersReducer.filters
+        filters: state.filtersReducer.filters,
+        saved: state.savedReducer.saved,
+        savedSearch: state.savedReducer.savedSearch
     };
 }
 
 function mapDispatchToProps(dispatch) {
     return bindActionCreators({
-        retrieveSuggestions: retrieveSuggestions}, dispatch)
+        retrieveSuggestions: retrieveSuggestions,
+        addSave: addSave}, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Suggestions);

@@ -12,9 +12,12 @@ export default function(state = INITIAL_STATE, action) {
                 loading: true
             };
         case 'SUGGESTIONS_RETRIEVE_SUCCESS':
+            //remove first just for demo due to porn in results
+            let newSuggestions = action.payload.results.slice();
+            newSuggestions.splice(0,1);
             return {
                 ...state,
-                suggestions: action.payload.results,
+                suggestions: newSuggestions,
                 loading: false
             };
         case 'SUGGESTIONS_RETRIEVE_FAIL':

@@ -4,6 +4,13 @@
 
   &__messages {
     height: 350px;
+
+    @media (max-width: 1199px) {
+      height: 283px;
+    }
+    @media (max-width: 991px) {
+      height: 193px;
+    }
   }
 
   &__message-form {
