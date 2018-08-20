@@ -1,0 +1,44 @@
+@import '../../assets/style/basics';
+
+.chat {
+
+  &__messages {
+    height: 350px;
+
+    @media (max-width: 1199px) {
+      height: 283px;
+    }
+    @media (max-width: 991px) {
+      height: 193px;
+    }
+  }
+
+  &__message-form {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__message-input {
+
+    &:focus {
+      color: #fff;
+      box-shadow: 0 2px $brand-color;
+    }
+  }
+
+  &__message-send-btn {
+
+    &:hover {
+      color: $brand-color;
+      background-color: $primary-color;
+    }
+
+    &:focus {
+      color: #fff;
+      box-shadow: none;
+      border: solid 0;
+      background-color: $primary-color;
+    }
+  }
+}

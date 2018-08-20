@@ -1,0 +1,15 @@
+.saved-movies {
+
+  &__item-img {
+    width: 100%;
+
+    @media (max-width: 767px) {
+      width:26.5%;
+      height: 100%;
+    }
+  }
+
+  &__item {
+    width: 100%;
+  }
+}

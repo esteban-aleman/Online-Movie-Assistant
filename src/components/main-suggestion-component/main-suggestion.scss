@@ -1,0 +1,24 @@
+@import '../../assets/style/_variables.scss';
+
+.main-suggestion {
+
+  &__movie-overlay {
+    height: 6rem;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  &__movie-add-btn {
+
+    &:hover {
+      color: $brand-color;
+      background-color: $primary-color;
+      box-shadow: none;
+    }
+  }
+}
+
+.detail-modal__movie-img {
+
+}
