@@ -28,7 +28,7 @@ export default function(state = INITIAL_STATE, action) {//sci-fi
                 case 'war':
                 case 'western':
                     return {
-                        filters: {...state.filters, genres: [...state.filters.genres, action.payload] }
+                        filters: {...state.filters, genres: [action.payload] }//[...state.filters.genres, action.payload]
                     };
                     break;
                 default:
