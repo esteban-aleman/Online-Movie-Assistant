@@ -1,0 +1,19 @@
+.secondary-options {
+
+  &__item-img {
+    width: 100%;
+
+    @media (max-width: 767px) {
+      width:16.5%;
+      height: 100%;
+    }
+  }
+
+  &__item {
+    width: 16.5%;
+    
+    @media (max-width: 767px) {
+      width:100%;
+    }
+  }
+}

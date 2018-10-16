@@ -1,0 +1,46 @@
+@import './_variables.scss';
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: $primary-color;
+}
+
+.bg--primary-color{
+  background-color: $primary-color;
+
+  &:focus {
+    background-color: $primary-color;
+  }
+}
+
+.bg--secondary-color{
+  background-color: $secondary-color;
+}
+
+.border--dark-grey {
+  border: solid 2px $dark-grey;
+}
+
+.text--white {
+  color: #fff;
+}
+
+.text--green {
+  color: #32cd32;
+}
+
+.text--brand-color {
+  color: $brand-color;
+}
+
+.text--bold {
+  font-weight: 700;
+}
+
+.text--sm {
+  font-size: 0.8rem;
+}
+
+.overflow-y--auto {
+  overflow-y: auto;
+}
